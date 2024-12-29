@@ -5,6 +5,7 @@ Instructions and some handy notes to setup a home server and connect using SSH.
 1. https://dev.to/zduey/how-to-set-up-an-ssh-server-on-a-home-computer
 2. https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys
 3. https://gcore.com/learning/how-to-change-ssh-port/
+4. https://www.freecodecamp.org/news/subnet-cheat-sheet-24-subnet-mask-30-26-27-29-and-other-ip-address-cidr-network-references/
 
 ### Learning material :: 
 1. https://www.codecademy.com/learn/learn-the-command-line
@@ -132,7 +133,14 @@ You can now log in to that account without a password:
 ssh username@remote_host
 ```
 7. Copying your Public SSH Key to a Server Without SSH-Copy-ID - Ref link :: https://www.digitalocean.com/community/tutorials/ssh-essentials-working-with-ssh-servers-clients-and-keys#copying-your-public-ssh-key-to-a-server-without-ssh-copy-id
-8. 
+
+### Instructions to set your ip static on the server (Ref article #4)
+
+8. Making IP of the saturns server static
+9. Configure router to open port to direct ssh connect to the static server
+10. Learn and setup IP routing from anywhere to my router
+
+   
 
 
 
