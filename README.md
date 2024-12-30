@@ -137,7 +137,37 @@ ssh username@remote_host
 ### Instructions to set your ip static on the server (Ref article #4)
 
 8. Making IP of the saturns server static
-9. Configure router to open port to direct ssh connect to the static server
+
+Two ways - 1. Router config change to Reserved IP instead of DHCP. 2. Setup config on saturn server to use a specific IP. 
+
+```
+1. Router Config change to Reserved IP for saturn-server
+Log in to your router's admin interface: You'll need the username and password (often found on a sticker on the router).
+
+Find the DHCP reservation or static IP assignment: Most routers will have an option to reserve an IP address for a
+specific MAC address (each network device has a unique MAC address). Find your server's MAC address (usually in its
+network settings) and assign it a static IP address outside the DHCP range (e.g., if your DHCP range is
+192.168.1.100-192.168.1.200, you could assign 192.168.1.50 to your server).
+```
+9. Configure router port forwarding to direct ssh connections to the saturn server
+
+```
+Port Forwarding
+
+Ports: Ports are like "doors" on your server. They allow different types of network traffic to reach specific services. SSH uses port 22 by default.
+
+Port Forwarding: Since your router is the gateway to your network, you need to tell it to forward incoming SSH requests (on port 22) to your server's private IP address. Here's the general process:
+
+Log in to your router's admin interface.
+Find the port forwarding or virtual server settings: The name varies by router.
+Create a new port forwarding rule:
+Service Name: (Optional) Give it a descriptive name like "SSH Server."
+External Port: 22 (This is the port you'll use to connect from outside your network).
+Internal Port: 22 (This is the port your server is listening on, incase of saturn its something else).
+Internal IP Address: Your server's static private IP address (e.g., 192.168.1.50).
+Protocol: TCP
+```
+
 10. Learn and setup IP routing from anywhere to my router
 
    
