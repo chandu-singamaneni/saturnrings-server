@@ -149,6 +149,19 @@ specific MAC address (each network device has a unique MAC address). Find your s
 network settings) and assign it a static IP address outside the DHCP range (e.g., if your DHCP range is
 192.168.1.100-192.168.1.200, you could assign 192.168.1.50 to your server).
 ```
+```
+2. Setup config on saturn-server to use a static ip address
+
+Modify the Connection: Use the following command to modify the connection with your static IP settings. Replace the placeholders with your actual values:
+
+nmcli connection modify "Connection Name" ipv4.method manual ipv4.addresses "192.168.1.50/24" ipv4.gateway "192.168.1.1" ipv4.dns "8.8.8.8,8.8.4.4"
+
+After modifying the connection, you need to reactivate it for the changes to take effect:
+
+nmcli connection down "Connection Name"
+nmcli connection up "Connection Name"
+```
+
 9. Configure router port forwarding to direct ssh connections to the saturn server
 
 ```
