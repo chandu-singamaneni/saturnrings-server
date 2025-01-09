@@ -1,5 +1,5 @@
 # saturnrings-server
-Instructions and some handy notes to setup a home server and connect using SSH. 
+Instructions and some handy notes to setup a home server and connect to the server using SSH. 
 
 ### Referred articles :: 
 1. https://dev.to/zduey/how-to-set-up-an-ssh-server-on-a-home-computer
