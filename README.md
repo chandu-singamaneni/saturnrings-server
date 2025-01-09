@@ -183,7 +183,20 @@ Protocol: TCP
 
 10. Learn and setup IP routing from anywhere to my router
 
-   
+```
+Step 1 :: Followed these instructions to setup a hostname in noip application :: https://www.noip.com/support/knowledgebase/free-dynamic-dns-getting-started-guide-ip-version
+
+Step 2 :: Registered a hostname and linked it to my server ip.
+
+Step 3 :: Installed DDNS client on the server to run every 5 min and update the ip tables. Link ::
+
+https://www.noip.com/support/knowledgebase/installing-the-linux-dynamic-update-client
+
+Step 4 :: Configured it to run every 5 min. You can confirm last run and ip updated with the following command "sudo noip2 -S"
+
+Finally hooray!! you have a server that can be accessed from anywhere with some sort of security protection.
+```
+
 
 
 
